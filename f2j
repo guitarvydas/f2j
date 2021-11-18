@@ -1,4 +1,3 @@
 #!/bin/bash
-rm -f queryfb.pl
-cat - >queryfb.pl
-swipl -q -g 'consult(query).' -g 'pall.' -g 'halt.'
+# convert fb input from stdin to json
+docker run --rm -i pt f2j-helper.bash
